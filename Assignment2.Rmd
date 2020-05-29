@@ -1,7 +1,7 @@
 ---
-title: Assignment02
-author: Lauren Thomas 
-date: (Sys.time(8:33pm), '05 27, 2020)
+title: "Assignment02"
+author: "Lauren Thomas" 
+date: "'r format(Sys.time(8:33pm), '05 27, 20')'"
 output:
   html_document: default
   pdf_document: default
@@ -30,8 +30,8 @@ boxplot(weight ~ group,                             # compare weight by group
 		las = 1,                                    # rotate y-axis values
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
-		ylim = c(3,7),                             # set scale of y-axis
-		col = c("blue","purple","pink"))        # set bar fill colors
+		ylim = c(3,7),                              # set scale of y-axis
+		col = c("blue","purple","pink"))            # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
