@@ -41,3 +41,4 @@ knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+There are difference in the dried weight of plants compared to the control group and the 2 treatment. Also the data gave us a clear cut between the two treatments and the control group. The control group dried wieght was 5.032, treament 1 was 4.661, and treamnet 2 was 5.526. Treamnet one was lower than the control group, and treamnet 2 was above the control group.
