@@ -3,14 +3,14 @@ title: "BIOL390: Assignment 2"
 author: "Lucas Finner"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
-  html_document: Assignment2
-  pdf_document: Assignment2
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-something
+
 ## Results from an Experiment on Plant Growth
 
 **Description:** Results from an experiment to compare yields (as measured by dried weight of plants) obtained under a control and two different treatment conditions.
@@ -19,9 +19,8 @@ something
 
 ## Analysis
 
->>Replace the in the code below with the necessary R instructions to give the mean values for each factor level of this dataset in a pretty little table. Hint - the comparison and dataset are the same as in the barplot. You will want to use the function (FUN) of `mean`.
+>>Replace the `XXX` in the code below with the necessary R instructions to give the mean values for each factor level of this dataset in a pretty little table. Hint - the comparison and dataset are the same as in the barplot. You will want to use the function (FUN) of `mean`.
 
-`r knitr::kable(aggregate(barplot))`
 
 ```{r barplot}
 boxplot(weight ~ group,                             # compare weight by group
@@ -31,14 +30,14 @@ boxplot(weight ~ group,                             # compare weight by group
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
 		ylim = c(3,7),                             # set scale of y-axis
-		col = c("red1","orange1","blue2"))        # set bar fill colors
+		col = c("red","blue","orange"))        # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
-
 ```{r anova, fig.cap="One-way ANOVA of Plant Growth Data"}
 knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+
 This anova shows trt1 has the lowest weight of the 3 plant groups. trt2 has the highest.
