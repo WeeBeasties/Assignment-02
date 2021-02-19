@@ -1,6 +1,6 @@
 ---
 title: "BIOL390: Assignment 2"
-author: "YOUR NAME"
+author: "Monica Pittiglio"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document: default
@@ -21,7 +21,7 @@ something
 
 >>Replace the `XXX` in the code below with the necessary R instructions to give the mean values for each factor level of this dataset in a pretty little table. Hint - the comparison and dataset are the same as in the barplot. You will want to use the function (FUN) of `mean`.
 
-`r knitr::kable(aggregate(XXX))`
+`r knitr::kable(aggregate(PlantGrowth, weight ~ group, FUN = mean))
 
 ```{r barplot}
 boxplot(weight ~ group,                             # compare weight by group
@@ -30,8 +30,8 @@ boxplot(weight ~ group,                             # compare weight by group
 		las = 1,                                    # rotate y-axis values
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
-		ylim = c(0,10),                             # set scale of y-axis
-		col = c("ivory2","ivory3","ivory4"))        # set bar fill colors
+		ylim = c(3,7),                             # set scale of y-axis
+		col = c("red","blue","purple"))        # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
@@ -41,3 +41,5 @@ knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+
+>>Residuals have many more factors than group, and deviate further from the mean. Group has a larger mean, but an F value well over 1, which indicates a large variation among the group.
