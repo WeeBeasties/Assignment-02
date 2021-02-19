@@ -1,10 +1,11 @@
 ---
-title: "BIOL390: Assignment 2"
+title: 'BIOL390: Assignment 2'
 author: "Emily Barnhart"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document: default
   pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +32,7 @@ boxplot(weight ~ group,                             # compare weight by group
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
 		ylim = c(3, 7),                             # set scale of y-axis
-		col = c("ivory2","ivory3","ivory4"))        # set bar fill colors
+		col = c("blue","yellow","pink"))        # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
@@ -41,3 +42,4 @@ knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+Plants grew the best in treatment two, compared with the control and treatment one. However, all three were very similar. 
