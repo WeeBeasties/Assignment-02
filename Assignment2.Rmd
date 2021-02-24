@@ -21,9 +21,8 @@ something
 
 >>Replace the `XXX` in the code below with the necessary R instructions to give the mean values for each factor level of this dataset in a pretty little table. Hint - the comparison and dataset are the same as in the barplot. You will want to use the function (FUN) of `mean`.
 
-`r knitr::kable(aggregate(
-mean(weight ~ group,
-		data = PlantGrowth)))
+`r knitr::kable(aggregate(weight ~ group,
+		data = PlantGrowth, mean))
 `
 
 ```{r barplot}
