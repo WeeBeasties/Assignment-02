@@ -30,8 +30,8 @@ boxplot(weight ~ group,                             # compare weight by group
 		las = 1,                                    # rotate y-axis values
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
-		ylim = c(0,10),                             # set scale of y-axis
-		col = c("ivory2","ivory3","ivory4"))        # set bar fill colors
+		ylim = c(3,7),                             # set scale of y-axis
+		col = c("red","white","blue"))        # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
@@ -41,3 +41,5 @@ knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+
+This is an analysis of variance between the values of growth weights of three different plants.  The plants, ctrl, trt1, and trt2, have mean dry weights of 5.032, 4.661, and 5.526 respectively with ranges depicted by the above box-plots.
