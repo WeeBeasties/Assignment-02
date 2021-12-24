@@ -1,7 +1,7 @@
 ---
 title: "BIOL390: Assignment 2"
-author: "YOUR NAME"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+author: "WYATT WATERBURY"
+date: "12/24/2021"
 output:
   html_document: default
   pdf_document: default
@@ -31,8 +31,8 @@ boxplot(weight ~ group,                             # compare weight by group
 		las = 1,                                    # rotate y-axis values
         ylab = "Dried weight of plants",            # set y-axis title
 		xlab = "Group",                             # set x-axis title
-		ylim = c(0,10),                             # set scale of y-axis
-		col = c("ivory2","ivory3","ivory4"))        # set bar fill colors
+		ylim = c(3,7),                             # set scale of y-axis
+		col = c("red","blue","green"))        # set bar fill colors
 ```
 
 >>Edit the barplot above so that the y-axis range plotted is from 3 to 7 and change the colors of the bars to something that you find fun.
@@ -42,3 +42,5 @@ knitr::kable(anova(lm(weight ~ group, data = PlantGrowth)),digits = 3)
 ```
 
 >>Provide a short summary of the ANOVA analysis summarized above.
+
+Since our P-value, Pr>F, is less than 0.05 we reject the null hypothesis. This means that the statistical differences of the growth observed were due to the treatments and not by random chance. Conluding that trt2 is indeed effective at promoting plant growth and trt1 tends to lead to underdeveloped plant growth.
